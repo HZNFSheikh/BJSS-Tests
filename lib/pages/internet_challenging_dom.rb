@@ -11,12 +11,11 @@ def click_red_button
   find(RED_BUTTON_CLASS).click
 end
 
-def get_button_text
+def read_button_text
   find(RED_BUTTON_CLASS).text
 end
 
-def check_button_label_change(array)
-    # if the last and second to last items do not match then return true - this means that button label changes after each click
+def check_button_label_change(array) #array that compares the label of the button to see if it changes
     if array.last != array[-2]
       true
     else
